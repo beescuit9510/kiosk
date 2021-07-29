@@ -102,8 +102,12 @@ public class Order {//extends MyLinkedList{
 				if(sel == 'y') {
 					System.out.print("고객님 성함을 입력해주세요 : ");
 					String name = sc.next();
-					Methods.addPoint(name, (double)(m[searchIndex].getPrice() * 0.05));
-					System.out.println("적립이 완료되었습니다.");
+					boolean isPointSaved =  Methods.addPoint(name, (double)(m[searchIndex].getPrice() * 0.05));
+					if(isPointSaved) {
+						System.out.println("적립이 완료되었습니다.");						
+					}else {
+						System.out.println("적립이 실패되었습니다.");												
+					}
 				}else {
 					System.out.print("메인메뉴로 돌아갑니다.");
 					return;

@@ -49,8 +49,8 @@ public class Methods {
 		
 	}
 	
-	  public static void addPoint(String name, double point) {
-		  ml.addPoint(name, point);
+	  public static boolean addPoint(String name, double point) {
+		  return ml.addPoint(name, point);
 
 	   }
 	

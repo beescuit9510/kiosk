@@ -117,12 +117,14 @@ public class MyLinkedList {
 		}
 	}
 
-	public void addPoint(String name, double point) {
+	public boolean addPoint(String name, double point) {
 		Node node = find(name);
 		if (node == null) {
 			System.out.println("확인되지 않는 회원 입니다.");
+			return false;
 		} else {
-			node.addPoint(point);;
+			node.addPoint(point);
+			return true;
 		}
 
 	}
